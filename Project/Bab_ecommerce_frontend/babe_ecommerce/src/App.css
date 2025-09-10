@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
+
+
+.my-text {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600; /* Semi Bold */
+}
+
+
+
+@font-face {
+  font-family: 'IntegralCF';
+  src: url('./fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satosi_bold';
+  src: url('./fonts/Satoshi-Black.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satosi_light';
+  src: url('./fonts/Satoshi-Light.otf') format('opentype');
+  /* font-weight: bold; */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satosi_regular';
+  src: url('./fonts/Satoshi-Regular.otf') format('opentype');
+  /* font-weight: bold; */
+  font-style: normal;
+}
+
+.heading::first-letter{
+  text-transform: uppercase;
+
+}
+
+
+/*Browse Image Section*/
+
+
+
+.satosi_bold{
+  font-family: 'satosi_bold';
+}
+.satosi_light{
+  font-family: 'satosi_light';
+}
+
+.satosi_regular{
+  font-family: 'satosi_regular';
+}
+
+.integral{
+  font-family: "IntegralCF";
+}
+
+
+
+/* App.css */
+
+/* === Color Palette === */
+:root {
+  --primary-green: #10B981;
+  --light-green: #D1FAE5;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --white: #FFFFFF;
+  --black: #000000;
+  --purple:#800080;
+}
+
+/* === Example Usage === */
+.bg-white {
+  background-color: var(--white);
+}
+.bg-purple{
+  background-color: var(--purple);
+}
+.border-purple{
+  border-color:  var(--purple);
+}
+
+.text-purple{
+  color: var(--purple);
+}
+
+
+.text-green {
+  color: var(--primary-green);
+}
+
+.bg-green-light {
+  background-color: var(--light-green);
+}
+
+.text-gray {
+  color: var(--gray-500);
+}
+
+.border-gray {
+  border-color: var(--gray-200);
+  
+}
+
+.button {
+  border-radius: 10px;
+  background-color: var(--purple);
+  color: #fff;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #b328b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-text{
+  color: #000000;
+}
+.nav-text:hover{
+  color: var(--purple);
+  
+}
+
+.nav-text-bg{
+  background-color: #000000;
+}
+.nav-text-bg:hover{
+  background-color: var(--purple);
+  
+}
+
+h1,h2,h3{
+  font-family: "poppins",sans-serif;
+  font-weight: bold !important;
+}
+
+
+
+.footer-text{
+  font-size: 15px;
+  color: rgba(94, 92, 92, 0.856);
+}
+
+
+/* Parent grid layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* mobile: 2 cards */
+  gap: 12px; /* gap between cards */
+}
+
+/* Product card adjustments */
+.product-card {
+  position: relative;
+  /* border-radius: 10px; */
+  background: white;
+  overflow: hidden;
+  padding: 10px; /* mobile ke liye chhota padding */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
+}
+
+/* Image compact */
+.product-image img {
+  width: 100%;
+  height: 300px !important; /* chhoti image mobile ke liye */
+  object-fit: cover;
+  border-radius: 8px;
+  background-size: cover;
+  margin-bottom: 6px;
+}
+
+
+/* Title */
+.product-card h3 {
+  font-size: 14px !important;
+  font-weight: 600;
+  margin: 4px 0;
+  text-align: left;
+}
+
+/* Price section */
+.price {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  /* font-family: 'satosi_light' !important; */
+}
+
+/* Old price */
+.old-price {
+  text-decoration: line-through;
+  color: red;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+
+
+/* Buy Now Button */
+.buy-now-btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+
+  background: #fb641b;
+  color: white;
+  /* color: gray; */
+  border: 2px solid gray ;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* thoda neeche se start */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover par smooth animation */
+.product-card:hover .buy-now-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* apni jagah pe aa jaye */
+}
+
+/* .buy-now-btn:hover{
+   border: 2px solid #800080 ;
+   color: #800080;
+  
+} */
+
+
+.product-card p{
+ margin-bottom: 5px;
+ font-family: 'satosi_regular';
+}
+.product-card ::first-letter{
+  text-transform: uppercase;
+}
+
+.buy-now-btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px){
+  .buy-now-btn{
+    font-size: 12px;
+  }
+
+}
+
+/* ✅ Tablet and Desktop responsive */
+@media (min-width: 640px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* .product-card{
+    padding: 0px;
+  } */
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-image img {
+    height: 180px; /* thoda bada tablet/desktop pe */
+  }
+
+  .product-card h3 {
+    font-size: 16px !important;
+  }
+ 
+
+
+
+}
+
+
+/* Add to Cart Center Button */
+.center-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  /* background: rgba(255, 255, 255, 0.15); Light blur effect */
+  background: #800080;
+  backdrop-filter: blur(10px);
+  color: white; /* White text for contrast on dark bg */
+  padding: 12px 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); optional border */
+  opacity: 0; /* Always visible */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.product-card:hover .center-button {
+  /* background: rgba(255, 255, 255, 0.25); */
+  transform: translate(-50%, -50%) scale(1.05); 
+  opacity: 1;/* Slight zoom on hover */
+}
+
+@media (max-width: 600px) {
+  .center-button {
+    padding: 8px 16px;   
+    font-size: 12px;    
+    gap: 4px;            
+  }
+}
+
+
+/* Wishlist Button */
+.wishlist-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  background: white;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.3s;
+}
+
+.wishlist-button.active-wishlist {
+  background: red;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .wishlist-button {
+    padding: 5px;      
+    font-size: 12px;   
+    top: 6px;           
+    right: 6px;
+  }
+}
+footer li {
+  cursor: pointer;
+}
+
+.swiper-slide {
+  transition: transform 0.5s ease;
+}
+
+/* Increase dot size */
+.swiper-pagination-bullet {
+   width: 12px !important;
+  height: 12px !important;
+  background: #ccc; /* Inactive dot color */
+  opacity: 1; /* Override Swiper default */
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Active dot styling */
+.swiper-pagination-bullet-active {
+  background: var(--purple) !important; 
+  border: 1px solid white !important; 
+  transform: scale(1.2); /* Optional: Make active dot slightly bigger */
+}
+
+
+.no-underline{
+  text-decoration: none;
+
+}
+
+
+
+.swiper-slide-custom {
+  transition: transform 0.5s ease;
+}
+.swiper-slide-custom:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product-image img {
+    height: 180px; /* thoda bada tablet/desktop pe */
+  }
+
+  .product-card h3 {
+    font-size: 16px !important;
+    
+  }
+  .product-card .price span {
+    font-size: 12px !important;
+    
+  }
+ 
+  .product-card{
+    padding: 0px !important;
+  }
+
+}
+ 
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease forwards;
+}
+
+.animate-slide-out-left {
+  animation: slide-out-left 0.3s ease forwards;
+}
+
+
+.product-card h3{
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif ;
+  
+}
+.product-card p{
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif ;
+  
+}
+
+ .price  span{
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif ;
+      font-size: 15px;
+}
+
+
+.price .off{
+  color: #FF9765 !important;
+}
+
+/* .content{
+  padding: 10px;
+} */
+
+.custom-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}

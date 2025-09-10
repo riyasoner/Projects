@@ -1,0 +1,9 @@
+@import "tailwindcss";
+.input-style {
+  @apply w-full p-2  rounded-[5px] border border-gray-400 outline-none transition-all duration-150;
+}
+
+
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
